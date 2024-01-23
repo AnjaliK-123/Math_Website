@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Multiplication Calculator</h2>
+
+    <label for="num1">Enter Number 1: </label>
+    <input type="number" id="num1">
+
+    <label for="num2">Enter Number 2: </label>
+    <input type="number" id="num2">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result">Result: </p>
+
+    <nav>
+        <a href="addition.html">Go to Addition Page</a>
+    </nav>
+
+
+    <main>
+        <p> Multiplication is the process of combining two or more numbers to calculate their total.</p>
+
+    <script>
+        function calculate() {
+            // Get the input values
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            // Check if the input is valid
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerText = 'Please enter valid numbers';
+            } else {
+                // Perform the operation (addition in this case)
+                var result = num1 * num2;
+
+                // Display the result
+                document.getElementById('result').innerText = 'Result: ' + result;
+            }
+        }
+    </script>
+
+    </main>
+
+    <footer>
+        <p>Footer information goes here.</p>
+    </footer>
+
+</body>
+</html>
